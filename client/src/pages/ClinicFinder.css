@@ -1,0 +1,225 @@
+.clinic-page { padding-bottom: 3rem; }
+
+.clinic-layout { display: grid; grid-template-columns: 320px 1fr; gap: 1.5rem; }
+
+.clinic-controls {
+  padding: 1.5rem;
+  height: fit-content;
+  position: sticky;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.clinic-controls label { font-size: 0.85rem; font-weight: 600; margin-bottom: 0.4rem; }
+
+.search-field-wrap {
+  position: relative;
+}
+
+.search-field-wrap input {
+  padding-left: 2.2rem;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.filter-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.filter-chip {
+  padding: 0.3rem 0.65rem;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-chip:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.filter-chip.active {
+  background: rgba(0, 212, 170, 0.15);
+  border-color: var(--accent-1);
+  color: var(--accent-1);
+  font-weight: 600;
+}
+
+.clinics-count {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  padding: 0.6rem 0.8rem;
+  background: rgba(0,212,170,0.08);
+  border: 1px solid rgba(0, 212, 170, 0.2);
+  border-radius: 8px;
+}
+
+.emergency-box {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+.emergency-box h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.emergency-items { display: flex; flex-direction: column; gap: 0.5rem; }
+.emergency-item { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: var(--text-secondary); }
+.emergency-num { color: var(--danger); font-weight: 700; text-decoration: none; font-size: 1rem; }
+.emergency-num:hover { text-decoration: underline; }
+
+.clinic-results { min-height: 300px; display: flex; flex-direction: column; }
+
+.clinic-empty { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 4rem 2rem; }
+.empty-icon { font-size: 3rem; margin-bottom: 1rem; }
+.clinic-empty h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--text-secondary); }
+.clinic-empty p { font-size: 0.88rem; color: var(--text-muted); }
+
+.error-msg { background: rgba(255,77,109,0.1); border: 1px solid rgba(255,77,109,0.3); border-radius: var(--radius); padding: 1rem; color: var(--danger); }
+
+.clinics-grid { display: flex; flex-direction: column; gap: 0.85rem; }
+
+.clinic-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.35rem;
+  cursor: pointer;
+  position: relative;
+  transition: var(--transition);
+}
+
+.clinic-card.selected {
+  border-color: var(--accent-1);
+  background: rgba(0,212,170,0.05) !important;
+  box-shadow: 0 8px 30px rgba(0, 212, 170, 0.1);
+}
+
+.clinic-type-icon { font-size: 2.2rem; flex-shrink: 0; margin-top: 2px; }
+
+.clinic-info { flex: 1; }
+.clinic-info h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.35rem; }
+
+.clinic-badges-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.6rem;
+}
+
+.clinic-type-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  background: rgba(0,212,170,0.12);
+  color: var(--accent-1);
+  border-radius: 100px;
+}
+
+.facility-cap-badge {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.cap-etu {
+  border-color: rgba(255, 77, 109, 0.3);
+  color: #ff99aa;
+  background: rgba(255, 77, 109, 0.08);
+}
+
+.cap-blood {
+  border-color: rgba(246, 201, 14, 0.3);
+  color: #f6c90e;
+}
+
+.clinic-details {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.clinic-address { font-size: 0.88rem; color: #ccd5e0; }
+
+.clinic-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+
+.clinic-phone-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  background: rgba(0, 212, 170, 0.1);
+  border: 1px solid rgba(0, 212, 170, 0.3);
+  color: var(--accent-1);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.clinic-phone-btn:hover {
+  background: rgba(0, 212, 170, 0.2);
+}
+
+.copy-info-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.copy-info-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+}
+
+.clinic-expand-icon {
+  font-size: 1.3rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .clinic-layout { grid-template-columns: 1fr; }
+  .clinic-controls { position: static; }
+}
